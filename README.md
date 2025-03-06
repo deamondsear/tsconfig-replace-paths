@@ -77,4 +77,4 @@ And then target that. Your final build script might look like this. You first co
 
 ## Inspired by
 
-[tsconfig-paths](https://github.com/dividab/tsconfig-paths) and [tscpaths](https://github.com/joonhocho/tscpaths)
+[tsconfig-paths](https://github.com/deamondsear/tsconfig-replace-paths)

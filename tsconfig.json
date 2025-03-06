@@ -2,6 +2,7 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
     "baseUrl": ".",
     "lib": ["es5", "es6", "es7", "es2017", "dom", "ES2021.String"],
     "module": "commonjs",

@@ -2,7 +2,7 @@
 
 import * as program from 'commander'
 import { existsSync, readFileSync, writeFileSync } from 'fs'
-import { sync } from 'globby'
+import { globbySync } from 'globby'
 import { dirname, relative, resolve } from 'path'
 import { loadConfig } from './util'
 
@@ -206,10 +206,10 @@ const replaceAlias = (text: string, outFile: string): string =>
     .replace(importRegex, (orig, matched) => replaceImportStatement(orig, matched, outFile))
 
 // import relative to absolute path
-const files = sync(`${outPath.replaceAll('\\', '/')}/**/*.{js,jsx,ts,tsx}`, {
+const files = globbySync(`${outPath.replaceAll('\\', '/')}/**/*.{js,jsx,ts,tsx}`, {
   dot: true,
   noDir: true,
-} as any).map(x => resolve(x))
+} as any).map((x: any) => resolve(x))
 
 let changedFileCount = 0
 
