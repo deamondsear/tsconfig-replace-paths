@@ -1,14 +1,14 @@
 {
   "name": "tsconfig-replace-paths-new",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Replace absolute paths to relative paths for package compilation",
   "author": "Dmitriy",
   "license": "MIT",
-  "main": "dist/commonjs/index.js",
-  "module": "dist/esm/index.js",
+  "type": "module",
+  "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "bin": {
-    "tsconfig-replace-paths": "dist/commonjs/index.js"
+    "tsconfig-replace-paths-new": "dist/esm/index.js"
   },
   "repository": {
     "type": "git",
@@ -16,18 +16,16 @@
   },
   "config": {
     "dirBuild": "./dist",
-    "dirCommonjs": "./dist/commonjs",
     "dirEsm": "./dist/esm",
     "dirSrc": "./src"
   },
   "publishConfig": {
-    "scope": "deamondsear",
+    "scope": "@deamondsear/tsconfig-replace-paths",
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "build:cjs": "tsc -p ./tsconfig.cjs.json",
     "build:esm": "tsc -p ./tsconfig.esm.json",
-    "build": "yarn build:esm && yarn build:cjs",
+    "build": "yarn build:esm",
     "nuke:all": "yarn nuke:node-nodules && yarn nuke:build",
     "nuke:build:rebuild": "yarn nuke:build && yarn build",
     "nuke:build": "rm -rf $npm_package_config_dirBuild",
