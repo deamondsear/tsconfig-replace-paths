@@ -1,6 +1,6 @@
-const path = require('path')
-const fs = require('fs')
-const JSON5 = require('json5')
+import path from 'path'
+import fs from 'fs'
+import JSON5 from 'json5'
 
 /*
 "baseUrl": ".",
@@ -41,7 +41,7 @@ export const mapPaths = (
 
 export const loadConfig = (file: string): ITSConfig => {
   const fileToParse = fs.readFileSync(file)
-  const parsedJsonFile = JSON5.parse(fileToParse)
+  const parsedJsonFile = JSON5.parse(fileToParse.toString())
 
   const {
     extends: extendsPath,

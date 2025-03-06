@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "allowSyntheticDefaultImports": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "lib": ["es5", "es6", "es2015", "es7", "es2016", "es2017", "ES2021.String"],
     "module": "es6",

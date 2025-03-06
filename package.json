@@ -1,6 +1,6 @@
 {
   "name": "tsconfig-replace-paths-new",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Replace absolute paths to relative paths for package compilation",
   "author": "Dmitriy",
   "license": "MIT",
@@ -24,8 +24,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "build:esm": "tsc -p ./tsconfig.esm.json",
-    "build": "yarn build:esm",
+    "build": "tsc -p ./tsconfig.esm.json",
     "nuke:all": "yarn nuke:node-nodules && yarn nuke:build",
     "nuke:build:rebuild": "yarn nuke:build && yarn build",
     "nuke:build": "rm -rf $npm_package_config_dirBuild",
