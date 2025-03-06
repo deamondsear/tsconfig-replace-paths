@@ -4,7 +4,7 @@ import { Command } from 'commander'
 import { existsSync, readFileSync, writeFileSync } from 'fs'
 import { globbySync } from 'globby'
 import { dirname, relative, resolve } from 'path'
-import { loadConfig } from './util'
+import { loadConfig } from './util.js'
 
 const program = new Command()
 
